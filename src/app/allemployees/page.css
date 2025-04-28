@@ -1,0 +1,497 @@
+/* page.css */
+ 
+.page-container {
+    padding: 1.5rem;
+  }
+ 
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+ 
+  }
+ 
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    background-color: #e5e7eb;
+    color: #374151;
+    transition: background-color 0.2s;
+  }
+ 
+  .filter-btn:hover {
+    background-color: #dbeafe;
+  }
+ 
+  .filter-btn.active {
+ 
+        background:linear-gradient(135deg, #707bff, #d65dff);
+       
+    color: white;
+  }
+ 
+  .employee-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+ 
+ 
+ 
+ 
+  .profile-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+ 
+ 
+ 
+ 
+ 
+  .employee-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px 20px; /* Adjust gap for spacing */
+    width: 100%;
+  }
+ 
+  .employee-contact {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+  }
+ 
+  .employee-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+ 
+  .employee-role {
+    font-size: 0.9rem;
+    color: #777;
+  }
+ 
+  .employee-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    color: black;
+  }
+ 
+  .employee-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+ 
+  .profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+ 
+  .edit-btn {
+   
+    color:blueviolet;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+ 
+  .edit-btn svg {
+    margin-right: 5px;
+  }
+ 
+  .add-activity-btn {
+    position: fixed; /* Keeps it fixed even when scrolling */
+    bottom: 20px; /* Adjust spacing from bottom */
+    right: 20px; /* Adjust spacing from right */
+    z-index: 1000; /* Ensures it's above other elements */
+    background:linear-gradient(135deg, #707bff, #d65dff);/* Adjust color if needed */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px; /* Makes it rounded */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+ 
+  .modal-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+ 
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    color:black
+  }
+ 
+  .modal-body input {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    font-size: 0.9rem;
+    color: black;
+  }
+ 
+  .submit-btn {
+    background:linear-gradient(135deg, #707bff, #d65dff);;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+  }
+ 
+  .close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+  }
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+ 
+  .form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+ 
+  .form-row label {
+    width: 30%;
+    font-weight: bold;
+  }
+ 
+  .form-row input,
+  .form-row select {
+    width: 65%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+ 
+  .profile-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .small-modal {
+    width: 350px; /* Smaller width */
+    max-width: 90%;
+    padding: 15px;
+  }
+ 
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+ 
+  .form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:black
+  }
+ 
+  .form-row label {
+    width: 35%;
+    font-weight: bold;
+  }
+ 
+  .form-row input,
+  .form-row select {
+    width: 60%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+ 
+  .profile-preview {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+ 
+  .center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .deactivate-btn {
+    
+    color: red;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .deactivate-btn:hover {
+    background-color: #ff3333;
+  }
+  .warning-modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .warning-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .warning-content h3 {
+    color: #ff4d4d;
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .warning-content p {
+    color: #333;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .warning-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .yes-btn, .no-btn {
+    padding: 8px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .yes-btn {
+    background: #ff4d4d;
+    color: white;
+  }
+  
+  .yes-btn:hover {
+    background: #ff3333;
+  }
+  
+  .no-btn {
+    background: #6b7280;
+    color: white;
+  }
+  
+  .no-btn:hover {
+    background: #4b5563;
+  }
+
+  @media screen and (max-width: 768px) {
+    .employee-details {
+      grid-template-columns: 1fr; /* Single column on mobile */
+      gap: 5px;
+    }
+  
+    .employee-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 12px;
+    }
+  
+    .employee-info {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .profile-img {
+      margin-bottom: 10px;
+    }
+  
+    .edit-btn, .deactivate-btn {
+      margin-top: 10px;
+    }
+  
+    /* Modal Adjustments */
+    .modal-box {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .form-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .form-row label {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  
+    .form-row input,
+    .form-row select {
+      width: 100%;
+    }
+  }
+  
+  /* Extra Small Devices */
+  @media screen and (max-width: 375px) {
+    .filter-btn {
+      padding: 8px 14px;
+      font-size: 13px;
+    }
+  
+    .employee-name {
+      font-size: 1rem;
+    }
+  
+    .employee-role {
+      font-size: 0.8rem;
+    }
+  
+    .employee-contact {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Add Activity Button */
+  .add-activity-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: linear-gradient(135deg, #707bff, #d65dff);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+  }
+  
+  /* Modal Styles */
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .warning-modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 300px;
+  }
+  
+  /* Form Styles */
+  .form-row {
+    margin-bottom: 10px;
+  }
+  
+  .submit-btn {
+    background: linear-gradient(135deg, #707bff, #d65dff);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  /* Warning Modal Buttons */
+  .warning-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .yes-btn, .no-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .yes-btn {
+    background: #ff4d4d;
+    color: white;
+  }
+  
+  .no-btn {
+    background: #6b7280;
+    color: white;
+  }
+ 

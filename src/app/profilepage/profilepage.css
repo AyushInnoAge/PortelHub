@@ -1,0 +1,409 @@
+
+:root{
+  background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw; /* Full height */
+    background-color: white;
+    padding: 20px; /* Prevents content cutoff */
+    overflow: hidden; 
+    position: fixed;
+    top: 0;
+    left: 0;/* Prevents container-level scrolling */
+  }
+  .profile-card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1100px;
+    max-height: 90vh; /* Limits height to fit within the viewport */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    gap: 20px;
+  
+    position: fixed; /* Keeps it in place */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers it */
+    
+    overflow-y: auto; /* Enables scrolling only inside the card */
+  }
+  .profile-left, .profile-right {
+    min-width: 300px;
+    flex: 1;
+  }
+  
+  .profile-left {
+    background: #f5f5f5;
+    padding: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 300px; /* Prevents shrinking too much */
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-img-wrapper {
+    top: 20px; /* Keeps profile image at top while scrolling */
+    z-index: 10
+  }
+  
+  .profile-img {
+    border-radius: 50%;
+    border: 3px solid hsl(290, 89%, 39%);
+    width: 140px; /* Increased size */
+    height: 140px; /* Increased size */
+    object-fit: cover;
+  }
+  
+  .profile-name {
+    font-size: 22px; /* Increased font size */
+    
+    margin-top: 15px;
+  }
+  
+  .profile-role,.profile-designation,.profile-address{
+    font-size: 16px;
+      color: #666;
+      margin-top: 7px;
+  
+  }
+  .badges {
+    margin-top: 35px;
+  }
+  
+  .badge {
+    padding: 8px 14px; /* Increased padding */
+    border-radius: 12px;
+    font-size: 14px; /* Increased font size */
+    margin: 5px;
+    display: inline-block;
+  }
+  .badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .badge-yellow { background: gold; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);color: black;font-weight: bold;}
+  .badge-gray { background: gray;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); color: black;font-weight: bold;}
+  .badge-blue { background: #4a90e2; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);font-weight: bold;}
+  .badge-green { background: #5cb85c; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);font-weight: bold;}
+  .badge-red { background: #d9534f;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2) ;font-weight: bold;}
+  .badge-purple { background: #800080; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);font-weight: bold;}
+  
+  .profile-right {
+    flex: 2;
+    padding: 30px;
+    min-width: 300px;
+  }
+  
+  .section-title {
+    color: #5a5a5a;
+    font-size: 20px; /* Increased font size */
+    font-weight: bold;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ensures dynamic column count */
+    gap: 15px;
+    margin-top: 15px;
+    position: sticky;
+  top: 0; /* Prevents movement when scrolling */
+  background: white;
+  padding: 10px;
+  }
+  
+  .info-item label {
+    font-size: 16px; /* Increased font size */
+    color: #666;
+  }
+  
+  .info-item p {
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  
+  .edit-btn {
+    background: linear-gradient(#707BFF, #D65DFF);
+    color: white;
+    border: none;
+    padding: 10px 18px; /* Increased padding */
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px; /* Increased font size */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+   
+    cursor: pointer;
+  }
+  
+  .edit-btn:hover {
+    background: #8a5cf6;
+  }
+  
+  .achievements {
+    margin-top: 20px;
+  }
+  
+  .achievements-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .achievement-item {
+    background: #eef2ff;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-top: 8px;
+    color: #5a5a5a;
+  }
+  
+  .xp-badge {
+    background: #ffcc00;
+    color: black;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .profile-name{
+    color: black;
+  }
+  .profile-role{
+    color: black;
+  
+  }
+  
+  .profile-designation{
+    color: black;
+  
+  }
+  .profile-address{
+    color: black;
+  
+  }
+  
+  .badge-title {
+    color: #707BFF;
+    font-weight: bolder;
+    font-size: medium;
+  }
+ 
+  
+  .section-title{
+    color: #707BFF;
+  
+  }
+    
+  .xps-icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background: linear-gradient(135deg, #fffdd0, #ffcc00);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .xps-icon:hover {
+    background: #f5f5f5;
+  }
+  
+  .icon1 {
+    color:#8C730C;
+    font-size: 20px;
+  }
+  
+  .xps-text {
+    color: black;
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .profile-card::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .profile-card::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  .profile-card::-webkit-scrollbar-thumb {
+    background: #707BFF;
+    border-radius: 10px;
+  }
+ 
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+    color:#333  
+  }
+  .profile-info p, .profile-info input {
+    width: 65%;
+    padding: 8px;
+    border: 1px solid#ddd;
+   
+    background-color:white;
+    color: #333;
+  }
+  
+  .profile-info input {
+    outline: none;
+    transition: border 0.3s;
+  }
+  
+  .profile-info input:focus {
+    border-color: #707BFF;
+  }
+  .image-edit input {
+    display: none;
+    color: #333;
+}
+.profile-info h3 {
+  margin-bottom: 15px;
+  box-sizing: content-box;
+  color: #707BFF;
+  font-weight: bold;
+}
+
+.image-edit label {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #707BFF;
+    color: black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.image-edit-icon{
+  color: black;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .profile-card {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .info-row label {
+    margin-bottom: 5px;
+  }
+
+  .info-row p,
+  .info-row input {
+    width: 100%;
+  }
+
+  .badge {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .edit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile-card {
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 0;
+  }
+
+  .profile-name {
+    font-size: 18px;
+  }
+
+  .profile-designation,
+  .profile-address {
+    font-size: 12px;
+  }
+
+  .badge-list {
+    gap: 5px;
+  }
+
+  .achievement-item {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .xps-icon {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .icon1 {
+    font-size: 16px;
+  }
+}
+
+/* Scrollbar Styling */
+.profile-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.profile-card::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.profile-card::-webkit-scrollbar-thumb {
+  background: #707BFF;
+  border-radius: 10px;
+}
+
+/* Form Input Focus States */
+.profile-info input:focus {
+  border-color: #707BFF;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(112, 123, 255, 0.2);
+}
+  
+  
