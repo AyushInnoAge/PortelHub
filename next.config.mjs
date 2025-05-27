@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // add this line
+  output: "export",
+
+  basePath: "/PortalHub", // replace with your GitHub repo name
 
   images: {
     remotePatterns: [
