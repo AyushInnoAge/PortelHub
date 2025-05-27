@@ -1,27 +1,28 @@
-name: Next.js CI/CD
+name: Deploy Next.js to GitHub Pages
 
 on:
   push:
     branches: [main]
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
+      
       - name: Install dependencies
         run: npm install
+
       - name: Build Next.js app
         run: npm run build
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+      - name: Export static files
+        run: npm run export
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
+          publish_branch: gh-pages
